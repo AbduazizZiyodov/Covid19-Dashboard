@@ -1,25 +1,25 @@
+import { ApiService } from './../services/api.service';
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-main-statistics',
   templateUrl: './main-statistics.component.html',
-  styleUrls: ['./main-statistics.component.scss']
+  styleUrls: ['./main-statistics.component.scss'],
 })
 export class MainStatisticsComponent implements OnInit {
-  totalCases = 0;
-  totalDeath = 0;
-  totalRecovered = 0;
+  totalCases: number = 0;
+  totalDeath: number = 0;
+  totalRecovered: number = 0;
   updateTime = 0;
-  constructor(private httpClient: HttpClient) { }
+  constructor(private api: ApiService) {}
 
   ngOnInit(): void {
-    this.httpClient.get('https://disease.sh/v3/covid-19/all').subscribe((data: any) => {
+    this.api.getAll().subscribe((data: any) => {
       this.totalCases = data.cases;
       this.totalDeath = data.deaths;
       this.totalRecovered = data.recovered;
       this.updateTime = data.updated;
     });
   }
-
 }
