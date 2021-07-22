@@ -1,7 +1,25 @@
-<!-- Header -->
-<nav class="navbar navbar-expand-lg navbar-light bg-success mb-4">
-    <a class="navbar-brand text-light" routerLink="/">
-        <h4><i class="fa fa-flask"></i> Covid19-Dashboard </h4>      
-    </a>
-</nav>
-<!-- /Header -->
+<mdb-navbar
+  SideClass="navbar navbar-expand-lg navbar-light"
+  [containerInside]="false"
+>
+  <mdb-navbar-brand
+    ><a class="navbar-brand" href="#"
+      ><mdb-icon fas icon="globe"></mdb-icon> Covid Dashboard</a
+    ></mdb-navbar-brand
+  >
+  <links>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link waves-light" mdbWavesEffect
+          >Home<span class="sr-only">(current)</span></a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-light" mdbWavesEffect>Statistics</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-light" mdbWavesEffect>Charts</a>
+      </li>
+    </ul>
+  </links>
+</mdb-navbar>

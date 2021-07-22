@@ -1,3 +1,61 @@
-<app-main-statistics></app-main-statistics>
-<hr>
-<app-countries-statistics></app-countries-statistics>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <mdb-card class="mb-2 mt-3" data-aos="zoom-in" data-aos-duration="1000">
+        <mdb-card-img src="assets/stats.png" alt=""></mdb-card-img>
+        <mdb-card-body>
+          <mdb-card-title>
+            <h4>Xush Kelibsiz!</h4>
+          </mdb-card-title>
+
+          <mdb-card-text
+            >Koronavirus bo'yicha to'liq statistikani bizning saytimizdan oling!
+            <br />
+            <small
+              >Ushbu statistika {{ updateTime | date: "medium" }}da
+              yangilangan.</small
+            >
+          </mdb-card-text>
+        </mdb-card-body>
+      </mdb-card>
+    </div>
+
+    <div class="col-md-6">
+      <mdb-card class="mb-2" data-aos="fade-right" data-aos-duration="1000">
+        <mdb-card-img src="assets/world.png" class="w-95" alt=""></mdb-card-img>
+        <mdb-card-body>
+          <mdb-card-title>
+            <h4>Jadvallar</h4>
+          </mdb-card-title>
+
+          <mdb-card-text
+            >Barcha davlatlarga oid bo'lgan barcha statistikani jadval
+            ko'rinishida oling!
+          </mdb-card-text>
+          <button type="button" mdbBtn color="pink" mdbWavesEffect>
+            <mdb-icon fas icon="arrow-circle-right"></mdb-icon> O'tish
+          </button>
+        </mdb-card-body>
+      </mdb-card>
+    </div>
+
+    <div class="col-md-6">
+      <mdb-card data-aos="fade-left" data-aos-duration="1000">
+        <mdb-card-img src="assets/chart.png" alt=""></mdb-card-img>
+        <mdb-card-body>
+          <mdb-card-title>
+            <h4>Diagrammalar</h4>
+          </mdb-card-title>
+
+          <mdb-card-text
+            >Barcha davlatlarga oid bo'lgan statistikalarni diagramma
+            ko'rinishida oling!
+          </mdb-card-text>
+          <button type="button" mdbBtn color="pink" mdbWavesEffect>
+            <mdb-icon fas icon="arrow-circle-right"></mdb-icon> O'tish
+          </button>
+        </mdb-card-body>
+      </mdb-card>
+    </div>
+  </div>
+</div>
